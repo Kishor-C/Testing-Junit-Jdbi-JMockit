@@ -44,7 +44,4 @@ method under test calls dao.getAllEmployees(), the method that is tested is
 For demo purpose this project only tests constructor, setName, getName, getId, getSalary and listAll methods of Employee class, there
 must be few more test cases written for find()
 
-# Note
-1. This project has not called all the methods of EmployeeDao
-2. Project is not following standard structure to simplify the code, in real time obviously there will be a dao layer, service layer, factory pattern, singleton pattern applied and modularized for better maintainance.
 

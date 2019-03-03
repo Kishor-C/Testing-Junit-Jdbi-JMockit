@@ -26,6 +26,11 @@ find(): it calls dao().findById(id) that produces an Employee matching to the id
 
 src/test/java/com/org has only one class named EmployeeTest to test the methods present inside Employee class
 
+# Testing setters, constructors and getters
+testEmployeeParameterizedConstructor() tests the parameterized constructor and getters 
+testEmployeeSetName() tests the setName() and getName()
+
+
 # JMockit while testing Employee.listAll()
 This method is tested using testListAll(), however listAll() method internal implementation calls dao.getAllEmployees() so we mock the
 implementation of dao() itself.
@@ -33,3 +38,13 @@ testListAll method mocks the original dao() and returns the instance of DAO give
 to database instead returns the Employees mentioned in the <b>new Expectations(){{....}} </b>, which is an anonymous class which has a 
 Instance Initialization block that creates some Employee objects and adds to the list, the result would be the returned value when a 
 method under test calls dao.getAllEmployees(), the method that is tested is 
+
+
+# Other test cases
+For demo purpose this project only tests constructor, setName, getName, getId, getSalary and listAll methods of Employee class, there
+must be few more test cases written for find()
+
+# Note
+1. This project has not called all the methods of EmployeeDao
+2. Project is not following standard structure to simplify the code, in real time obviously there will be a dao layer, service layer, factory pattern, singleton pattern applied and modularized for better maintainance.
+
